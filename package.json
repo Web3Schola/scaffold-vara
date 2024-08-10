@@ -1,0 +1,15 @@
+{
+  "name": "scaffold-vara",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:next": "yarn workspace @scaffold/nextjs dev",
+    "build:next": "yarn workspace @scaffold/nextjs build",
+    "start:next": "yarn workspace @scaffold/nextjs start",
+    "lint:next": "yarn workspace @scaffold/nextjs lint",
+    "build:vara": "yarn workspace @scaffold/vara cargo build --release",
+    "test:vara": "yarn workspace @scaffold/vara test"
+  }
+}
