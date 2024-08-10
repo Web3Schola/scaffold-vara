@@ -1,15 +1,31 @@
 {
   "name": "scaffold-vara",
+  "version": "0.0.1",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/vara",
+    "packages/nextjs"
   ],
   "scripts": {
-    "dev:next": "yarn workspace @scaffold/nextjs dev",
-    "build:next": "yarn workspace @scaffold/nextjs build",
-    "start:next": "yarn workspace @scaffold/nextjs start",
-    "lint:next": "yarn workspace @scaffold/nextjs lint",
+    "postinstall": "husky install",
+    "precommit": "lint-staged",
+    "format": "yarn next:format",
+    "start": "yarn workspace @scaffold/nextjs dev",
+    "next:lint": "yarn workspace @scaffold/nextjs lint",
+    "next:format": "yarn workspace @scaffold/nextjs format",
+    "next:check-types": "yarn workspace @scaffold/nextjs check-types",
+    "next:build": "yarn workspace @scaffold/nextjs build",
+    "next:serve": "yarn workspace @scaffold/nextjs serve",
+    "vercel": "yarn workspace @scaffold/nextjs vercel",
+    "vercel:yolo": "yarn workspace @scaffold/nextjs vercel:yolo",
     "build:vara": "yarn workspace @scaffold/vara cargo build --release",
     "test:vara": "yarn workspace @scaffold/vara test"
+  },
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3"
+  },
+  "dependencies": {
+    "yarn": "^1.22.17"
   }
 }
