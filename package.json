@@ -18,7 +18,7 @@
     "next:serve": "yarn workspace @scaffold/nextjs serve",
     "vercel": "yarn workspace @scaffold/nextjs vercel",
     "vercel:yolo": "yarn workspace @scaffold/nextjs vercel:yolo",
-    "build:vara": "yarn workspace @scaffold/vara cargo build --release",
+    "build:vara": "yarn workspace @scaffold/vara build",
     "test:vara": "yarn workspace @scaffold/vara test"
   },
   "devDependencies": {
